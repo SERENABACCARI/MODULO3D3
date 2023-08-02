@@ -13,22 +13,40 @@
     <title>Card Album!</title>
 
     <style>
+
+       /* @media(min-width:576){
+            body
+        }
+
+        @media(min-width:768px){
+            body
+        }
+        @media(min-width:992px){
+            body
+        }*/
+
         body {
-            background-color: cornflowerblue;
+            background-color: rgb(119, 10, 83);
             display: flex;
         }
 
-        nav {
-            background-color: rgb(102, 88, 189);
-            height: 50px;
-            
+        .navbar {
+            position: absolute;
+            flex-direction: row;
+
         }
 
         .contenitore {
             display: flex;
-            justify-content: center;
+            flex-direction: row;
+            margin-top: 100px;
+            margin-left: 50px;
         }
+
+       
+        
     </style>
+    
 </head>
 
 <body>
@@ -36,44 +54,24 @@
     <!-- Esercizio 2 
         Implementa una navigation bar usando il componente boostrap apposito.
          Questa navigazione dovrà linkare ogni sezione nella tua pagina. -->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="#">Musica <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Genere</a>
+                    <a class="nav-link" href="#">link</a>
+                    <a class="nav-link" href="#">preferiti</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Album <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                        aria-expanded="false">
-                        Genere
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Rock</a>
-                        <a class="dropdown-item" href="#">Metal</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Punk</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
     <!-- Esercizio 3
                 Crea una sezione responsive per i tuoi album preferiti.
                     In questa sezione dovrai avere:
@@ -82,26 +80,66 @@
                 3 album per linea quando lo schermo ha una dimensione intermedia (tablet o simili)
                 2 album per linea qunado lo schermo è molto piccolo (mobile)
             -->
-    <div class="contenitore">
+    <div class="contenitore ">
         <div class="row">
-            <div class="col 6 col-md-4 col-lg-3">
-                <div class="album">
+            <div class="col-12 col-md-6 col-sm-4">
+                <div class="album ">
                     <img src="https://www.teamworld.it/wp-content/uploads/2021/05/All-I-Know-So-Far-cover-album-Pink.jpg"
-                        class="card-img-top" alt="...">
+                        class="img-fluid" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Pink</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Go rock</a>
                     </div>
                 </div>
 
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-sm-4 ">
+                <div class="album ">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/814/878/453/band-music-guns-n-roses-wallpaper-preview.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Guns N Rose</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Go rock</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-sm-4">
+                <div class="album" >
+                    <img src="https://cd.guitar-network.com/image/tt2e9n/CD%20%20ACDC%20Rock%20Or%20Bust.jpg?width=800&crop=0&quality=90"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pink</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Go rock</a>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-sm-4 ">
+                <div class="album">
+                    <img src="https://i.discogs.com/HJsrXL1epbjdOFXGnqi9bJ1yHWtadhJLqPXaK4E6VVg/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NjYw/MTc5LTE1OTg3OTAx/OTYtMTA3OS5qcGVn.jpeg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pink</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Go rock</a>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
     </div>
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
